@@ -1,0 +1,55 @@
+
+
+/*-------------------- ХЛЕБНЫЕ КРОШКИ ----------------------*/
+
+
+.breadcrumbs {
+	margin: 50px 0;
+	font-size: 13px;
+	}
+
+.breadcrumbs__content {
+	display: flex;
+
+	color: #777779;
+}
+
+.breadcrumbs__link {
+	height: 16px;
+}
+
+.breadcrumbs__link:hover {
+	border-bottom: 1px solid #1D1D1F;
+}
+
+.breadcrumbs__content a {
+	color:#777779;
+}
+
+.breadcrumbs__content a:hover {
+	color: #1D1D1F;
+}
+
+
+/*------------------------ РАЗДЕЛЫ --------------------------*/
+
+
+
+
+
+@media (max-width: 1169.98px){
+	[class*="__container"] {
+		max-width: 970px;
+	}
+		
+
+}
+
+@media (max-width: 990.98px){
+	[class*="__container"] {
+		max-width: 750px;}
+
+		
+		
+
+}

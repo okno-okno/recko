@@ -1,0 +1,538 @@
+body{
+	height: 100%;
+	line-height: 1;
+	font-family: ubuntu;
+	font-weight: 400;
+	color: #343435;
+	
+	}
+
+	/*.wrapper{*/
+	/*	flex-direction: column; /*ориентируем его в колонку, чтобы весь сайта не выходил за границы этой колонки*/
+	/*	min-height: 100%; /*flex-container будет по минимуму 100% экрана*/
+	/*	overflow: hidden;} /*все за гранью flex-container срыто, чтобы не появилсягоризонтальный скролл*/
+	
+
+	.page {
+
+		flex: 1 1 auto;
+		/*1 - позволяет увеличиваться 1 - позволяет уменьшаться auto - заполняет все свободно епространство, чтобы прибить footer к низу*/
+
+		
+	}
+
+/*==========================================================*/
+
+	[class*="__container"]{
+		max-width: 1140px;
+		margin: 0 auto;
+	}
+
+/*===================== ВЕРХНЕЕ МЕНЮ =======================*/
+
+.header {
+	/*outline: 1px solid red;*/
+	background: #343435;
+	position: sticky; /*прилипает к верхнему краю*/
+	top: 0; /*без отступа сверху*/
+	left: 0; /*без отступа слева*/
+	width: 100%; /*на всю ширину*/
+	z-index: 50; /*высокий индекс, ближе к нам*/
+}
+.header__container {
+	display: flex; /*создаем flex-container*/
+	justify-content: space-between; /*распределяем содержимое контейнера равномерно по всему размеру*/
+	min-height: 50px; /*устанавливаем минимальную высоту контейнера*/
+	align-items: center; /*центрируем содержимое контейнера по вертикали*/
+	padding: 10px 0; /*выставляем padding безопасности, чтобы текст не прилип*/
+	color: #FFF; /*устанавливаемый наследуемый впоследствии цвет шрифта*/
+	gap: 20px; /*отступы между двумя меню при сужении до мобильного*/
+
+	
+}
+
+
+/*==========================================================*/
+
+.menu1__list {
+	display: flex; /*создаем flex-container*/
+	/*flex-wrap: wrap;*/ /*содержимое контейнера при сужении переносится на следующую стрку*/
+	align-items: center; /*центрируем содержимое контейнера по вертикали*/
+	gap: 30px; /*отступы между пунктами меню*/
+	position: relative; /*потому что все подменю будем позиционировать абсолютно*/
+
+}
+.menu2__list {
+	display: flex; /*создаем flex-container*/
+	align-items: center; /*центрируем содержимое контейнера по вертикали*/
+	gap: 30px; /*отступы между пунктами меню*/ 
+	/*можно сделать column-gap и row-gap*/
+	position: relative; /*потому что все подменю будем позиционировать абсолютно*/
+}
+
+.header__menu a:hover{
+	color: #ffdd00;
+}
+
+/*======================= ПОДМЕНЮ ============================*/
+
+.menu1__list li:hover .okomissii,
+.menu1__list li:hover .normotvorchestvo,
+.menu1__list li:hover .statistica,
+.menu1__list li:hover .kadry,
+.menu1__list li:hover .priem 
+{
+	display: block;
+}
+
+
+.okomissii {
+	display: none;
+	position: absolute;
+	top: 20px;
+	left: 0;
+	padding: 17px 0 0 0;
+}
+
+.normotvorchestvo {
+	display: none;
+	position: absolute;
+	top: 20px;
+	left: 150px;
+	padding: 17px 0 0 0;
+}
+
+.statistica {
+	display: none;
+	position: absolute;
+	top: 20px;
+	left: 337px;
+	padding: 17px 0 0 0;
+}
+
+.kadry {
+	display: none;
+	position: absolute;
+	top: 20px;
+	left: 362px;
+	padding: 17px 0 0 0;
+}
+
+.priem {
+	display: none;
+	position: absolute;
+	top: 20px;
+	left: 408px;
+	padding: 17px 0 0 0;
+}
+
+.li__okomissii,
+.li__normotvorchestvo,
+.li__statistica,
+.li__kadry,
+.li__priem
+{
+	background: #FFF;
+	padding: 0 15px 15px 15px;
+	border-left: 1px solid #E8E8E9;
+	border-right: 1px solid #E8E8E9;
+}
+
+.li__okomissii:first-child,
+.li__normotvorchestvo:first-child,
+.li__statistica:first-child,
+.li__kadry:first-child,
+.li__priem:first-child
+ {
+	background: #FFF;
+	padding: 15px 15px 15px 15px;
+}
+
+.li__okomissii:last-child,
+.li__normotvorchestvo:last-child,
+.li__statistica:last-child,
+.li__kadry:last-child,
+.li__priem:last-child   
+{
+	border-bottom: 1px solid #E8E8E9;
+}
+
+.text__okomissii, 
+.text__normotvorchestvo,
+.text__statistica,
+.text__kadry,
+.text__priem
+{
+	color: #343435;
+}
+
+
+.li__okomissii a:hover,
+.li__normotvorchestvo a:hover,
+.li__statistica a:hover,
+.li__kadry a:hover,
+.li__priem a:hover
+{
+	color: #008f3a;
+}
+
+
+
+.input__search {
+	box-sizing: border-box;
+	width: 300px;
+	height: 30px;
+	padding: 0 10px;
+
+	border: 1px solid #E8E8E9;
+
+	font-size: 14px;
+	font-weight: 300;
+	font-family: ubuntu;
+	
+
+}
+
+.button__search {
+	
+	width: 100px;
+	height: 30px;
+	background: #343435;;
+
+	font-size: 14px;
+	font-weight: 400;
+	font-family: ubuntu;
+	color: #fff;
+	
+}
+
+/*==========================================================*/
+
+.icon__link {
+	color: inherit; /*устанавливаем наследование цвета шрифта*/
+	font-size: 24px;
+}
+.text__link {
+	color: inherit; /*устанавливаем наследование цвета шрифта*/
+	font-size: 14px;
+	line-height: calc(16px / 14px * 100%);
+	font-weight: 400;
+}
+
+
+
+/*==========================================================*/
+
+@media (max-width: 1169.98px){
+	[class*="__container"] {
+		max-width: 970px;
+		}
+		.menu1__list, .menu2__list {
+			gap: 20px; /*отступы между пунктами меню*/
+		}
+
+		.statistica {
+			left: 277px;		
+		}
+
+		.kadry {
+			left: 302px;
+		}
+
+		.priem {
+			left: 348px;
+		}
+
+}
+
+@media (max-width: 990.98px){
+	[class*="__container"] {
+		max-width: 750px;
+		}
+		.menu1__list, .menu2__list {
+			gap: 20px; /*отступы между пунктами меню*/
+		}
+		
+		.menu__item2 {
+			display: none; /*убрали все текстовое меню*/
+		}
+
+}
+
+@media (max-width: 767.98px){
+	[class*="__container"] {
+		max-width: none;
+		padding: 0 15px; /*для мобильных устройств сделаем padding безопасности против прилипания,
+		а для остальных ражимов перескочим break point раньше наступления прилипания*/
+		}
+}
+
+
+/*======================= ЛОГОТИП =========================*/
+
+.logo {
+	padding: 20px 0 20px 0;
+	}
+
+.logo__content{
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.logo__image {
+	height: 100px;
+}
+
+.logo__title {
+	max-width: 400px;
+	color: #1D1D1F;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: calc(23 / 20 * 100%);
+	letter-spacing: 0.04em;
+	word-spacing: 5px;
+}
+
+/*======================= НИЖНЕЕ МЕНЮ =========================*/
+
+.navigation {
+	
+	position: sticky;
+	top: 50px;
+	left: 0;
+	z-index: 1;
+	background: #FFF;
+
+}
+.navigation__menu {
+	padding: 15px 0;
+	border-top: 1px solid #E8E8E9;
+	border-bottom: 1px solid #E8E8E9;
+	
+}
+.navigation__list {
+	display: flex; /*создаем flex-container*/
+	/*flex-wrap: wrap;*/ /*содержимое контейнера при сужении переносится на следующую стрку*/
+	align-items: center; /*центрируем содержимое контейнера по вертикали*/
+	gap: 30px; /*отступы между пунктами меню*/
+	position: relative; /*потому что все подменю будем позиционировать абсолютно*/
+	
+}
+.navigation__item {
+	color: #1D1D1F;
+	font-weight: 400;
+	
+
+}
+.navigation__item a:hover{
+	color: #008f3a;
+}
+
+.navigation__link {
+	color: inherit;
+}
+
+
+/*======================= ПОДМЕНЮ ============================*/
+
+.navigation__list li:hover .tarify,
+.navigation__list li:hover .documents,
+.navigation__list li:hover .control  
+{
+	display: block;
+}
+
+.tarify
+{
+	display: none;
+	position: absolute;
+	top: 12px;
+	left: 0;
+	padding: 17px 0 0 0;
+}
+
+.documents
+{
+	display: none;
+	position: absolute;
+	top: 12px;
+	left: 100px;
+	padding: 17px 0 0 0;
+}
+
+.control
+{
+	display: none;
+	position: absolute;
+	top: 12px;
+	left: 310px;
+	padding: 17px 0 0 0;
+}
+
+
+.li__tarify,
+.li__documents,
+.li__control
+{
+	background: #FFF;
+	padding: 0 15px 15px 15px;
+	border-left: 1px solid #E8E8E9;
+	border-right: 1px solid #E8E8E9;
+}
+
+.li__tarify:first-child,
+.li__documents:first-child,
+.li__control:first-child
+ {
+	background: #FFF;
+	padding: 15px 15px 15px 15px;
+}
+
+.li__tarify:last-child,
+.li__documents:last-child,
+.li__control:last-child
+{
+	border-bottom: 1px solid #E8E8E9;
+}
+
+
+.text__tarify,
+.text__documents,
+.text__control
+{
+	color: #343435;
+}
+
+
+/*==========================================================*/
+
+@media (max-width: 1169.98px){
+	[class*="__container"] {
+		max-width: 970px;
+		}
+		.navigation__list {
+			gap: 20px; /*отступы между пунктами меню*/
+		}
+
+}
+
+@media (max-width: 990.98px){
+	[class*="__container"] {
+		max-width: 750px;}
+				
+		.navigation {
+			display: none; /*убрали все текстовое меню*/
+		}
+}
+
+
+
+
+
+	/*======================= ФУТЕР =========================*/
+
+	.footer {
+		background: #343435;
+		width: 100%;
+		color: #FFF;
+		padding: 40px 0;
+		margin: 100px 0 0 0;
+		font-weight: 400;
+	}
+	
+	.footer__content {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	
+	.footer__links {
+		display: flex;
+		align-items: center;
+	}
+
+
+	.footer__logo {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		margin-bottom: 40px;
+	}
+	
+	.footer__logo__title {
+		color: #FFF;
+
+		max-width: 400px;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: calc(23 / 20 * 100%);
+		letter-spacing: 0.04em;
+		word-spacing: 5px;
+	}
+
+	.footer__data {
+		max-width: 260px;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: calc(20 / 14 * 100%);
+			}
+
+	.footer__data li:not(:last-child){
+		margin-bottom: 15px;
+	}
+
+	.footer__data a:hover {
+		color: #ffdd00;
+	}
+
+	.adress {
+		color:#FFF;
+
+	}
+
+	
+	.footer__links__right {
+		margin-left: 70px;
+	}
+
+
+	.footer__ul li:not(:last-child) {
+		margin-bottom: 15px;
+	}
+
+	.footer__ul a {
+		color:#FFF;
+	}
+
+	.footer__ul a:hover {
+		color: #ffdd00;
+	}
+
+
+	/*==========================================================*/
+
+	@media (max-width: 990.98px){
+							
+		.footer {
+			margin: 50px 0 0 0;				
+		}
+
+
+	.footer__contacts {
+		flex: 0 1 100%;
+		
+	}
+	.footer__links {
+		flex: 0 1 100%;
+		margin-top: 60px;
+		flex-wrap: wrap;
+					
+	}
+
+	.footer__ul li:not(:last-child) {
+		margin-bottom: 25px;
+	}
+		
+	}

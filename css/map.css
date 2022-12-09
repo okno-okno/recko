@@ -1,0 +1,205 @@
+
+
+/*-------------------- ХЛЕБНЫЕ КРОШКИ ----------------------*/
+
+
+.breadcrumbs {
+	margin: 50px 0;
+	font-size: 13px;
+	}
+
+.breadcrumbs__content {
+	display: flex;
+
+	color: #777779;
+}
+
+.breadcrumbs__link {
+	height: 16px;
+}
+
+.breadcrumbs__link:hover {
+	border-bottom: 1px solid #1D1D1F;
+}
+
+.breadcrumbs__content a {
+	color:#777779;
+}
+
+.breadcrumbs__content a:hover {
+	color: #1D1D1F;
+}
+
+
+/*------------------------ РАЗДЕЛЫ --------------------------*/
+
+
+.r__content {
+	
+
+	display: flex;
+	flex-wrap: wrap;
+	
+	justify-content: space-between;
+}
+
+
+
+.r-norm {
+	flex: 0 1 47.5%;
+
+	
+	padding: 35px 0 0 0;
+
+	font-family: 'Ubuntu';
+
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 18px;
+
+	color: #777779;
+}
+
+
+
+.column__left {
+	
+	flex: 0 1 47.5%;
+}
+
+.column__right {
+	
+	flex: 0 1 47.5%;
+}
+
+
+
+.r__title {
+	
+	padding: 0 0 15px 0;
+	margin: 0 0 15px 0;
+
+	border-bottom: 1px solid #E8E8E9;
+	
+	font-family: 'Ubuntu';
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 21px;
+
+	
+
+	color: #4A4A4C;
+	
+}
+
+.r__title a {
+	color: #4A4A4C;
+}
+
+.r__title a:hover {
+	color: #008f3a;
+}
+
+.r-okomissii__title {
+	
+	flex: 0 1 100%;
+	
+	padding: 0 0 15px 0;
+	border-bottom: 1px solid #E8E8E9;
+
+	font-family: 'Ubuntu';
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 21px;
+
+	color: #4A4A4C;
+}
+
+.r-okomissii__left {
+		
+	flex: 0 1 47.5%;
+
+	padding: 15px 0 0 0;
+
+	font-family: 'Ubuntu';
+
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 18px;
+
+	color: #777779;
+}
+
+
+
+.r-okomissii__right {
+		
+	flex: 0 1 47.5%;
+
+	padding: 15px 0 0 0;
+
+	font-family: 'Ubuntu';
+
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 18px;
+
+	color: #777779;
+}
+
+
+
+.r__ul {
+}
+
+.r__ul a {
+	color: inherit;
+}
+
+.r__ul a:hover {
+	color: #1D1D1F;
+}
+
+.r__li {
+	margin: 0 0 15px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1169.98px){
+	[class*="__container"] {
+		max-width: 970px;
+	}
+		
+
+}
+
+@media (max-width: 990.98px){
+	[class*="__container"] {
+		max-width: 750px;}
+				
+		.r-okomissii__left, .r-okomissii__right {
+			flex: 0 1 100%;
+		}
+
+		.r-okomissii__right {
+			padding: 0;
+		}
+
+		.column__left, .column__right {
+			flex: 0 1 100%;
+		}
+
+
+}
